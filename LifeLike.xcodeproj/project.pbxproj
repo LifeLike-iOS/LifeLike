@@ -56,15 +56,39 @@
 		618FAC9B2187A9DC009E4197 /* LifeLike */ = {
 			isa = PBXGroup;
 			children = (
-				618FAC9C2187A9DC009E4197 /* AppDelegate.swift */,
-				618FAC9E2187A9DC009E4197 /* ViewController.swift */,
-				618FACA02187A9DC009E4197 /* Main.storyboard */,
+				618FACB12187A9E7009E4197 /* AppDelegate */,
+				618FACB22187A9F2009E4197 /* Controllers */,
+				618FACB32187A9FB009E4197 /* Views */,
 				618FACA62187A9DD009E4197 /* Assets.xcassets */,
-				618FACA82187A9DD009E4197 /* LaunchScreen.storyboard */,
 				618FACAB2187A9DD009E4197 /* Info.plist */,
 				618FACA32187A9DC009E4197 /* LifeLike.xcdatamodeld */,
 			);
 			path = LifeLike;
+			sourceTree = "<group>";
+		};
+		618FACB12187A9E7009E4197 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				618FAC9C2187A9DC009E4197 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		618FACB22187A9F2009E4197 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				618FAC9E2187A9DC009E4197 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		618FACB32187A9FB009E4197 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				618FACA02187A9DC009E4197 /* Main.storyboard */,
+				618FACA82187A9DD009E4197 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
