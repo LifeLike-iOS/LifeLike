@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B060112218A0E7300006B40 /* BooksCollectionViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B060111218A0E7300006B40 /* BooksCollectionViewControllers.swift */; };
 		618FAC9D2187A9DC009E4197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618FAC9C2187A9DC009E4197 /* AppDelegate.swift */; };
 		618FAC9F2187A9DC009E4197 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618FAC9E2187A9DC009E4197 /* ViewController.swift */; };
 		618FACA22187A9DC009E4197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618FACA02187A9DC009E4197 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B060111218A0E7300006B40 /* BooksCollectionViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BooksCollectionViewControllers.swift; path = LifeLike/Controllers/BooksCollectionViewControllers.swift; sourceTree = SOURCE_ROOT; };
 		618FAC992187A9DC009E4197 /* LifeLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		618FAC9C2187A9DC009E4197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		618FAC9E2187A9DC009E4197 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				618FACA02187A9DC009E4197 /* Main.storyboard */,
+				3B060111218A0E7300006B40 /* BooksCollectionViewControllers.swift */,
 				618FACA82187A9DD009E4197 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -165,6 +168,7 @@
 				618FAC9F2187A9DC009E4197 /* ViewController.swift in Sources */,
 				618FACA52187A9DC009E4197 /* LifeLike.xcdatamodeld in Sources */,
 				618FAC9D2187A9DC009E4197 /* AppDelegate.swift in Sources */,
+				3B060112218A0E7300006B40 /* BooksCollectionViewControllers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
