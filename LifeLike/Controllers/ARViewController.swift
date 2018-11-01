@@ -19,7 +19,8 @@ class ARViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let referenceImages: Set<ARReferenceImage> = Set<ARReferenceImage>()
+        let whaleImage = ARReferenceImage((UIImage(named: "Whale")?.cgImage)!, orientation: .up, physicalWidth: 0.1)
+        let referenceImages: Set<ARReferenceImage> = [whaleImage]
         
         let configuration = ARWorldTrackingConfiguration()
         configuration.detectionImages = referenceImages
