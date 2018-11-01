@@ -19,20 +19,31 @@ class ARViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let referenceImages: Set<ARReferenceImage> = Set<ARReferenceImage>()
+        let whaleImage = ARReferenceImage((UIImage(named: "Whale")?.cgImage)!, orientation: .up, physicalWidth: 0.2)
+        let referenceImages: Set<ARReferenceImage> = [whaleImage]
         
-        let configuration = ARWorldTrackingConfiguration()
-        configuration.detectionImages = referenceImages
+        let configuration = ARImageTrackingConfiguration()
+        configuration.trackingImages = referenceImages
+        configuration.maximumNumberOfTrackedImages = 1
+        configuration.isLightEstimationEnabled = true
+        sceneView?.delegate = self
         sceneView?.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
         view.addSubview(sceneView!)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        sceneView.session.pause()
     }
 }
 
 extension ARViewController: ARSCNViewDelegate {
-    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        guard let imageAnchor = anchor as? ARImageAnchor else { return }
-        let referenceImage = imageAnchor.referenceImage
-        DispatchQueue.global(qos: .userInteractive).async {
+    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+        let node = SCNNode()
+        if let imageAnchor = anchor as? ARImageAnchor {
+            let referenceImage = imageAnchor.referenceImage
+                
             // Create a plane to visualize the initial position of the detected image.
             let plane = SCNPlane(width: referenceImage.physicalSize.width,
                                  height: referenceImage.physicalSize.height)
@@ -61,5 +72,6 @@ extension ARViewController: ARSCNViewDelegate {
             // Add the plane visualization to the scene.
             node.addChildNode(planeNode)
         }
+        return node
     }
 }

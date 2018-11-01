@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BBD2A2D218A1FC00090368F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD2A2C218A1FC00090368F /* Book.swift */; };
-		3BBD2A2F218A9CCE0090368F /* BookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD2A2E218A9CCE0090368F /* BookCollectionViewController.swift */; };
 		3BBD2A32218AB1E70090368F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD2A31218AB1E70090368F /* SearchViewController.swift */; };
 		3BBD2A34218AB97F0090368F /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD2A33218AB97F0090368F /* BookDetailViewController.swift */; };
 		618FAC9D2187A9DC009E4197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618FAC9C2187A9DC009E4197 /* AppDelegate.swift */; };
@@ -20,8 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3BBD2A2C218A1FC00090368F /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		3BBD2A2E218A9CCE0090368F /* BookCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewController.swift; sourceTree = "<group>"; };
 		3BBD2A31218AB1E70090368F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = LifeLike/Controllers/SearchViewController.swift; sourceTree = SOURCE_ROOT; };
 		3BBD2A33218AB97F0090368F /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		618FAC992187A9DC009E4197 /* LifeLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +44,6 @@
 		3BBD2A2B218A1E450090368F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3BBD2A2C218A1FC00090368F /* Book.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -96,7 +91,6 @@
 			children = (
 				3BBD2A31218AB1E70090368F /* SearchViewController.swift */,
 				618FAC9E2187A9DC009E4197 /* ARViewController.swift */,
-				3BBD2A2E218A9CCE0090368F /* BookCollectionViewController.swift */,
 				3BBD2A33218AB97F0090368F /* BookDetailViewController.swift */,
 			);
 			path = Controllers;
@@ -187,8 +181,6 @@
 				618FACA52187A9DC009E4197 /* LifeLike.xcdatamodeld in Sources */,
 				618FAC9D2187A9DC009E4197 /* AppDelegate.swift in Sources */,
 				3BBD2A34218AB97F0090368F /* BookDetailViewController.swift in Sources */,
-				3BBD2A2D218A1FC00090368F /* Book.swift in Sources */,
-				3BBD2A2F218A9CCE0090368F /* BookCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
