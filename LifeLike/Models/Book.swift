@@ -1,6 +1,6 @@
 import Foundation
 
-class BookItem {
+class Book {
   
   // MARK: - Properties
   var title: String?
