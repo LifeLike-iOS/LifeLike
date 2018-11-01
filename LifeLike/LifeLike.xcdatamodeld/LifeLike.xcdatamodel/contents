@@ -18,7 +18,7 @@
         <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="images" inverseEntity="Book" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Book" positionX="-63" positionY="-18" width="128" height="165"/>
+        <element name="Book" positionX="-292.2734375" positionY="-80.6953125" width="128" height="165"/>
         <element name="Images" positionX="-54" positionY="45" width="128" height="120"/>
     </elements>
 </model>

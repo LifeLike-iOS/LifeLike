@@ -10,9 +10,10 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController {
+class ARViewController: UIViewController {
 
-    var sceneView: ARSCNView?
+  @IBOutlet weak var arSceneView: ARSKView!
+  var sceneView: ARSCNView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
