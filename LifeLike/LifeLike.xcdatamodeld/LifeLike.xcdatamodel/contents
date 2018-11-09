@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18B75" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Book" representedClassName="Book" syncable="YES" codeGenerationType="class">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="17G2307" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SavedBook" representedClassName="SavedBook" syncable="YES" codeGenerationType="class">
         <attribute name="authors" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="chapter_count" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="isbn" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,17 +8,16 @@
         <attribute name="publication_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="publisher" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="images" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Images" inverseName="book" inverseEntity="Images" syncable="YES"/>
+        <relationship name="savedImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SavedImage" inverseName="savedBook" inverseEntity="SavedImage" syncable="YES"/>
     </entity>
-    <entity name="Images" representedClassName="Images" syncable="YES" codeGenerationType="class">
-        <attribute name="chapter_number" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="image_file" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="page_number" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    <entity name="SavedImage" representedClassName="SavedImage" syncable="YES" codeGenerationType="class">
+        <attribute name="imageFile" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="modelFile" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="images" inverseEntity="Book" syncable="YES"/>
+        <relationship name="savedBook" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SavedBook" inverseName="savedImage" inverseEntity="SavedBook" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Book" positionX="-292.2734375" positionY="-80.6953125" width="128" height="163"/>
-        <element name="Images" positionX="-54" positionY="45" width="128" height="120"/>
+        <element name="SavedBook" positionX="-292.2734375" positionY="-80.6953125" width="128" height="165"/>
+        <element name="SavedImage" positionX="-54" positionY="45" width="128" height="105"/>
     </elements>
 </model>
