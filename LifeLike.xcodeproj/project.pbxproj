@@ -15,6 +15,8 @@
 		618FACA52187A9DC009E4197 /* LifeLike.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 618FACA32187A9DC009E4197 /* LifeLike.xcdatamodeld */; };
 		618FACA72187A9DD009E4197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618FACA62187A9DD009E4197 /* Assets.xcassets */; };
 		618FACAA2187A9DD009E4197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618FACA82187A9DD009E4197 /* LaunchScreen.storyboard */; };
+		61B6F2A22194F192005B726E /* whale.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 61B6F2A12194F192005B726E /* whale.usdz */; };
+		61B6F2A62195054E005B726E /* small-dolphin.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 61B6F2A52195054E005B726E /* small-dolphin.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		618FACA62187A9DD009E4197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		618FACA92187A9DD009E4197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		618FACAB2187A9DD009E4197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61B6F2A12194F192005B726E /* whale.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = whale.usdz; sourceTree = "<group>"; };
+		61B6F2A52195054E005B726E /* small-dolphin.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "small-dolphin.usdz"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,8 @@
 		3BBD2A2B218A1E450090368F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				61B6F2A12194F192005B726E /* whale.usdz */,
+				61B6F2A52195054E005B726E /* small-dolphin.usdz */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,6 +172,8 @@
 				618FACAA2187A9DD009E4197 /* LaunchScreen.storyboard in Resources */,
 				618FACA72187A9DD009E4197 /* Assets.xcassets in Resources */,
 				618FACA22187A9DC009E4197 /* Main.storyboard in Resources */,
+				61B6F2A22194F192005B726E /* whale.usdz in Resources */,
+				61B6F2A62195054E005B726E /* small-dolphin.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
