@@ -20,6 +20,7 @@
 		618FACA52187A9DC009E4197 /* LifeLike.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 618FACA32187A9DC009E4197 /* LifeLike.xcdatamodeld */; };
 		618FACA72187A9DD009E4197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618FACA62187A9DD009E4197 /* Assets.xcassets */; };
 		618FACAA2187A9DD009E4197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618FACA82187A9DD009E4197 /* LaunchScreen.storyboard */; };
+		61A8A8F4219A342600677E7A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A8A8F3219A342600677E7A /* DataManager.swift */; };
 		61B6F2A62195054E005B726E /* Dolphin.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 61B6F2A52195054E005B726E /* Dolphin.usdz */; };
 		61B6F2A92195F960005B726E /* Whale.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 61B6F2A82195F960005B726E /* Whale.usdz */; };
 		61B6F2AB2195FBCE005B726E /* Manatee.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 61B6F2AA2195FBCE005B726E /* Manatee.usdz */; };
@@ -53,6 +54,7 @@
 		618FACA62187A9DD009E4197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		618FACA92187A9DD009E4197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		618FACAB2187A9DD009E4197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61A8A8F3219A342600677E7A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		61B6F2A52195054E005B726E /* Dolphin.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dolphin.usdz; sourceTree = "<group>"; };
 		61B6F2A82195F960005B726E /* Whale.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Whale.usdz; sourceTree = "<group>"; };
 		61B6F2AA2195FBCE005B726E /* Manatee.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Manatee.usdz; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		618FAC902187A9DC009E4197 = {
 			isa = PBXGroup;
 			children = (
+				61A8A8F3219A342600677E7A /* DataManager.swift */,
 				61B6F2A72195EE2A005B726E /* ARModels */,
 				3B61C6C32195035700A7089C /* Images */,
 				618FAC9B2187A9DC009E4197 /* LifeLike */,
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B61C6A52194F28C00A7089C /* Image.swift in Sources */,
+				61A8A8F4219A342600677E7A /* DataManager.swift in Sources */,
 				3BBD2A32218AB1E70090368F /* SearchViewController.swift in Sources */,
 				618FAC9F2187A9DC009E4197 /* ARViewController.swift in Sources */,
 				3B61C6A32194F27B00A7089C /* Book.swift in Sources */,
