@@ -15,6 +15,8 @@ class ARViewController: UIViewController {
     
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var sceneView: ARSCNView!
+    let dataManager = DataManager()
+    var images = [Image]()
     
     var currentNode: SCNNode?
     var currentAngle = Float(0)
@@ -24,7 +26,13 @@ class ARViewController: UIViewController {
         
         self.navigationController!.hidesBarsOnTap = true;
         
-        
+        dataManager.downloadBook(id: "5bff2130a9a32a5ac40d233c", { [self] in
+            let book = self.dataManager.getBook(title: "How to Solve a Rubiks Cube")
+            self.images = book!.images
+            DispatchQueue.main.async {
+                 self.resetTrackingConfiguration()
+            }
+        })
         // Do any additional setup after loading the view, typically from a nib.
         
         sceneView?.delegate = self
@@ -75,7 +83,10 @@ extension ARViewController: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         let node = SCNNode()
         if let imageAnchor = anchor as? ARImageAnchor, let imageName = imageAnchor.name {
-            let modelURL = Bundle.main.url(forResource: imageName, withExtension: "usdz")!
+            let image = images.first { im -> Bool in
+                return im.title == imageName
+            }
+            let modelURL = URL(string: image!.modelFile)!
             if let modelNode = SCNReferenceNode(url: modelURL) {
                 modelNode.load()
                 node.addChildNode(modelNode)
@@ -96,10 +107,9 @@ extension ARViewController: ARSCNViewDelegate {
 private extension ARViewController {
     func resetTrackingConfiguration() {
         currentNode = nil
-        let images = ["Whale",  "Dolphin", "Manatee"]
-        let referenceImages: Set<ARReferenceImage> = Set(images.map { (imageName) -> ARReferenceImage in
-            let refImage = ARReferenceImage((UIImage(named: imageName)?.cgImage)!, orientation: .up, physicalWidth: 0.5)
-            refImage.name =  imageName
+        let referenceImages: Set<ARReferenceImage> = Set(images.map { (image) -> ARReferenceImage in
+            let refImage = ARReferenceImage((image.imageFile.cgImage)!, orientation: .up, physicalWidth: 0.5)
+            refImage.name = image.title
             return refImage
         })
         let configuration = ARWorldTrackingConfiguration()
