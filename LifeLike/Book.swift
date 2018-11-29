@@ -13,8 +13,6 @@ public struct Book {
   var authors: String
   var ISBN: String
   var publisher: String
-  var publicationDate: Date
   var pageCount: Int
-  var chapterCount: Int
   var images: [Image]
 }

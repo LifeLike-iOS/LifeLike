@@ -9,12 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LifeLike/Controllers/ARViewController.swift"
-            timestampString = "563450024.438983"
+            filePath = "DataManager.swift"
+            timestampString = "565220497.85668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98">
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "saveBook(_:_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

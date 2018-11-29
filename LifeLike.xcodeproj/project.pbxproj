@@ -14,15 +14,16 @@
 		3B61C6C22195035300A7089C /* dog.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B61C6C02195035300A7089C /* dog.jpeg */; };
 		3BBD2A32218AB1E70090368F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD2A31218AB1E70090368F /* SearchViewController.swift */; };
 		3BBD2A34218AB97F0090368F /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD2A33218AB97F0090368F /* BookDetailViewController.swift */; };
-		3BC99B65218B7CF500FCB5CB /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BC99B64218B7CF500FCB5CB /* Models.scnassets */; };
 		618FAC9D2187A9DC009E4197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618FAC9C2187A9DC009E4197 /* AppDelegate.swift */; };
 		618FAC9F2187A9DC009E4197 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618FAC9E2187A9DC009E4197 /* ARViewController.swift */; };
 		618FACA22187A9DC009E4197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618FACA02187A9DC009E4197 /* Main.storyboard */; };
 		618FACA52187A9DC009E4197 /* LifeLike.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 618FACA32187A9DC009E4197 /* LifeLike.xcdatamodeld */; };
 		618FACA72187A9DD009E4197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618FACA62187A9DD009E4197 /* Assets.xcassets */; };
 		618FACAA2187A9DD009E4197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618FACA82187A9DD009E4197 /* LaunchScreen.storyboard */; };
-		61B6F2A22194F192005B726E /* whale.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 61B6F2A12194F192005B726E /* whale.usdz */; };
-		61B6F2A62195054E005B726E /* small-dolphin.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 61B6F2A52195054E005B726E /* small-dolphin.usdz */; };
+		61A8A8F4219A342600677E7A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A8A8F3219A342600677E7A /* DataManager.swift */; };
+		61B6F2A62195054E005B726E /* Dolphin.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 61B6F2A52195054E005B726E /* Dolphin.usdz */; };
+		61B6F2A92195F960005B726E /* Whale.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 61B6F2A82195F960005B726E /* Whale.usdz */; };
+		61B6F2AB2195FBCE005B726E /* Manatee.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 61B6F2AA2195FBCE005B726E /* Manatee.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,6 @@
 		3B61C6C02195035300A7089C /* dog.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpeg; sourceTree = "<group>"; };
 		3BBD2A31218AB1E70090368F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = LifeLike/Controllers/SearchViewController.swift; sourceTree = SOURCE_ROOT; };
 		3BBD2A33218AB97F0090368F /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
-		3BC99B64218B7CF500FCB5CB /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = Models.scnassets; path = LifeLike/Models.scnassets; sourceTree = SOURCE_ROOT; };
 		618FAC992187A9DC009E4197 /* LifeLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		618FAC9C2187A9DC009E4197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		618FAC9E2187A9DC009E4197 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
@@ -54,8 +54,10 @@
 		618FACA62187A9DD009E4197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		618FACA92187A9DD009E4197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		618FACAB2187A9DD009E4197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61B6F2A12194F192005B726E /* whale.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = whale.usdz; sourceTree = "<group>"; };
-		61B6F2A52195054E005B726E /* small-dolphin.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "small-dolphin.usdz"; sourceTree = "<group>"; };
+		61A8A8F3219A342600677E7A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		61B6F2A52195054E005B726E /* Dolphin.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dolphin.usdz; sourceTree = "<group>"; };
+		61B6F2A82195F960005B726E /* Whale.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Whale.usdz; sourceTree = "<group>"; };
+		61B6F2AA2195FBCE005B726E /* Manatee.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Manatee.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,6 @@
 		3BBD2A2B218A1E450090368F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				61B6F2A12194F192005B726E /* whale.usdz */,
-				61B6F2A52195054E005B726E /* small-dolphin.usdz */,
 				3B61C6A22194F27B00A7089C /* Book.swift */,
 				3B61C6A42194F28C00A7089C /* Image.swift */,
 			);
@@ -108,6 +108,8 @@
 		618FAC902187A9DC009E4197 = {
 			isa = PBXGroup;
 			children = (
+				61A8A8F3219A342600677E7A /* DataManager.swift */,
+				61B6F2A72195EE2A005B726E /* ARModels */,
 				3B61C6C32195035700A7089C /* Images */,
 				618FAC9B2187A9DC009E4197 /* LifeLike */,
 				3B61C6B12194FBC900A7089C /* LifeLikeTests */,
@@ -132,7 +134,6 @@
 				618FACB22187A9F2009E4197 /* Controllers */,
 				618FACB32187A9FB009E4197 /* Views */,
 				618FACA62187A9DD009E4197 /* Assets.xcassets */,
-				3BC99B64218B7CF500FCB5CB /* Models.scnassets */,
 				618FACAB2187A9DD009E4197 /* Info.plist */,
 				618FACA32187A9DC009E4197 /* LifeLike.xcdatamodeld */,
 			);
@@ -164,6 +165,16 @@
 				618FACA82187A9DD009E4197 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		61B6F2A72195EE2A005B726E /* ARModels */ = {
+			isa = PBXGroup;
+			children = (
+				61B6F2A82195F960005B726E /* Whale.usdz */,
+				61B6F2AA2195FBCE005B726E /* Manatee.usdz */,
+				61B6F2A52195054E005B726E /* Dolphin.usdz */,
+			);
+			path = ARModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,11 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				618FACAA2187A9DD009E4197 /* LaunchScreen.storyboard in Resources */,
-				3BC99B65218B7CF500FCB5CB /* Models.scnassets in Resources */,
 				618FACA72187A9DD009E4197 /* Assets.xcassets in Resources */,
 				618FACA22187A9DC009E4197 /* Main.storyboard in Resources */,
-				61B6F2A22194F192005B726E /* whale.usdz in Resources */,
-				61B6F2A62195054E005B726E /* small-dolphin.usdz in Resources */,
+				61B6F2AB2195FBCE005B726E /* Manatee.usdz in Resources */,
+				61B6F2A92195F960005B726E /* Whale.usdz in Resources */,
+				61B6F2A62195054E005B726E /* Dolphin.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B61C6A52194F28C00A7089C /* Image.swift in Sources */,
+				61A8A8F4219A342600677E7A /* DataManager.swift in Sources */,
 				3BBD2A32218AB1E70090368F /* SearchViewController.swift in Sources */,
 				618FAC9F2187A9DC009E4197 /* ARViewController.swift in Sources */,
 				3B61C6A32194F27B00A7089C /* Book.swift in Sources */,
@@ -485,7 +497,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.devin.fan.LifeLike;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LifeLike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -503,7 +515,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.devin.fan.LifeLike;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LifeLike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
