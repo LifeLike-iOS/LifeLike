@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "container:/Users/tiffanychen/Documents/dev/iOS/LifeLike/LifeLike.xcodeproj"
-      name = "Fonts">
-      <FileRef
-         location = "group:CircularStd-Black.otf">
-      </FileRef>
-      <FileRef
-         location = "group:CircularStd-BlackItalic.otf">
-      </FileRef>
-      <FileRef
-         location = "group:CircularStd-Bold.otf">
-      </FileRef>
-      <FileRef
-         location = "group:CircularStd-BoldItalic.otf">
-      </FileRef>
-      <FileRef
-         location = "group:CircularStd-Book.otf">
-      </FileRef>
-      <FileRef
-         location = "group:CircularStd-BookItalic.otf">
-      </FileRef>
-      <FileRef
-         location = "group:CircularStd-Medium.otf">
-      </FileRef>
-      <FileRef
-         location = "group:CircularStd-MediumItalic.otf">
-      </FileRef>
-   </Group>
    <FileRef
-      location = "self:">
+      location = "self:LifeLike.xcodeproj">
    </FileRef>
 </Workspace>
