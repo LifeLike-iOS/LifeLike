@@ -36,10 +36,11 @@ class ARViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         sceneView?.delegate = self
+        sceneView.allowsCameraControl = true
         resetTrackingConfiguration()
         
-        let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGesture(sender:)))
-        sceneView.addGestureRecognizer(panRecognizer)
+//        let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGesture(sender:)))
+//        sceneView.addGestureRecognizer(panRecognizer)
         
         view.addSubview(sceneView!)
     }
@@ -52,23 +53,23 @@ class ARViewController: UIViewController {
         return UIStatusBarAnimation.slide
     }
     
-    @objc func panGesture(sender: UIPanGestureRecognizer) {
-        guard let node = currentNode else { return }
-        let translation = sender.translation(in: sender.view!)
-        var newAngle = (Float)(translation.x)*(Float.pi)/180.0
-        newAngle += currentAngle
-        
-        node.transform = SCNMatrix4MakeRotation(newAngle, 0, 1, 0)
-        
-        if(sender.state == UIGestureRecognizer.State.ended) {
-            currentAngle = newAngle
-        }
-    }
-    
-    @objc func tapGesture(sender:  UITapGestureRecognizer) {
-        self.navigationController!.navigationBar.isHidden = false;
-    }
-    
+//    @objc func panGesture(sender: UIPanGestureRecognizer) {
+//        guard let node = currentNode else { return }
+//        let translation = sender.translation(in: sender.view!)
+//        var newAngle = (Float)(translation.x)*(Float.pi)/180.0
+//        newAngle += currentAngle
+//
+//        node.transform = SCNMatrix4MakeRotation(newAngle, 0, 1, 0)
+//
+//        if(sender.state == UIGestureRecognizer.State.ended) {
+//            currentAngle = newAngle
+//        }
+//    }
+//
+//    @objc func tapGesture(sender:  UITapGestureRecognizer) {
+//        self.navigationController!.navigationBar.isHidden = false;
+//    }
+//
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         sceneView.session.pause()

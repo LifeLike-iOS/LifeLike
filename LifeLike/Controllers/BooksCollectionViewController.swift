@@ -10,10 +10,19 @@ import UIKit
 
 class BooksCollectionViewController: UIViewController {
   
+    @IBOutlet weak var collectionView: UICollectionView!
     
-  @IBOutlet weak var collectionView: UICollectionView!
-  
-//  super.viewWillAppear(true)
+    override func viewDidLoad() {
+//        let layout = UICollectionViewFlowLayout()
+//        layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
+//        collectionView.delegate = self as? UICollectionViewDelegate
+//        collectionView.dataSource = self as? UICollectionViewDataSource
+//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
+//        collectionView.backgroundColor = UIColor.clear
+//        
+        
+    }
+    //  super.viewWillAppear(true)
 //    // Show the Navigation Bar
 //    self.navigationController?.setNavigationBarHidden(true, animated: true)
 //  }
@@ -36,3 +45,15 @@ class BooksCollectionViewController: UIViewController {
     */
 
 }
+
+//extension BookDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 1
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//
+//    }
+//
+//
+//}

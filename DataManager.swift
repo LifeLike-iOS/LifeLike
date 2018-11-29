@@ -60,6 +60,20 @@ class DataManager {
         }
         return nil
     }
+    
+    func getBooks() -> [Book] {
+        guard let context = appDelegate?.persistentContainer.viewContext else { return [] }
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedBook")
+        do {
+            let result = try context.fetch(request) as! [NSManagedObject]
+            return result.map({ (bookObject) -> Book in
+                return loadBook(data: bookObject)
+            })
+        } catch {
+            print(error)
+            return []
+        }
+    }
 }
 
 private extension DataManager {
@@ -93,16 +107,22 @@ private extension DataManager {
         saveContext(context, completion)
     }
     
-    func loadBook(data: NSManagedObject) -> Book {
+    func loadBookInfo(data: NSManagedObject) -> Book {
         let title = data.value(forKey: "title") as! String
         let authors = (data.value(forKey: "authors") as? String) ?? ""
         let isbn = data.value(forKey: "isbn") as! String
         let publisher = data.value(forKey: "publisher") as! String
         let pageCount = data.value(forKey: "pageCount") as! Int
+        return Book(title: title, authors: authors, ISBN: isbn, publisher: publisher, pageCount: pageCount, images: [])
+    }
+    
+    func loadBook(data: NSManagedObject) -> Book {
+        var book = loadBookInfo(data: data)
         let images = (data.value(forKey: "savedImages") as! Set).map { (savedImage) -> Image in
             loadImage(data: savedImage)
         }
-        return Book(title: title, authors: authors, ISBN: isbn, publisher: publisher, pageCount: pageCount, images: images)
+        book.images = images
+        return book
     }
     
     func loadImage(data: NSManagedObject) -> Image {

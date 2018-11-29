@@ -93,6 +93,7 @@
 		3B61C6B12194FBC900A7089C /* LifeLikeTests */ = {
 			isa = PBXGroup;
 			children = (
+				3B61C6C32195035700A7089C /* Images */,
 				3B61C6B22194FBC900A7089C /* LifeLikeTests.swift */,
 				3B61C6B42194FBC900A7089C /* Info.plist */,
 			);
@@ -137,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				61A8A8F3219A342600677E7A /* DataManager.swift */,
-				3B61C6C32195035700A7089C /* Images */,
 				618FAC9B2187A9DC009E4197 /* LifeLike */,
 				3B82C5DB21AF4DC000EEB233 /* Fonts */,
 				3B61C6B12194FBC900A7089C /* LifeLikeTests */,
@@ -516,7 +516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2ZQBU8N8FB;
+				DEVELOPMENT_TEAM = 8DH9CSDXAJ;
 				INFOPLIST_FILE = LifeLike/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -534,7 +534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2ZQBU8N8FB;
+				DEVELOPMENT_TEAM = 8DH9CSDXAJ;
 				INFOPLIST_FILE = LifeLike/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
