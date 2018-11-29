@@ -8,10 +8,11 @@
 
 import UIKit
 
-class BooksCollectionViewController: UICollectionView {
+class BooksCollectionViewController: UIViewController {
   
-    var collectionView: UICollectionView!
-
+    
+  @IBOutlet weak var collectionView: UICollectionView!
+  
 //  super.viewWillAppear(true)
 //    // Show the Navigation Bar
 //    self.navigationController?.setNavigationBarHidden(true, animated: true)
