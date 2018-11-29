@@ -12,8 +12,17 @@
 		3B61C6B32194FBC900A7089C /* LifeLikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B61C6B22194FBC900A7089C /* LifeLikeTests.swift */; };
 		3B61C6C12195035300A7089C /* succulent.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B61C6BF2195035300A7089C /* succulent.jpeg */; };
 		3B61C6C22195035300A7089C /* dog.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B61C6C02195035300A7089C /* dog.jpeg */; };
+		3B82C5DC21AF4E0800EEB233 /* CircularStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B82C5D321AF4DC000EEB233 /* CircularStd-Black.otf */; };
+		3B82C5DD21AF4E0B00EEB233 /* CircularStd-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B82C5D421AF4DC000EEB233 /* CircularStd-BlackItalic.otf */; };
+		3B82C5DE21AF4E0D00EEB233 /* CircularStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B82C5D521AF4DC000EEB233 /* CircularStd-Bold.otf */; };
+		3B82C5DF21AF4E0F00EEB233 /* CircularStd-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B82C5D621AF4DC000EEB233 /* CircularStd-BoldItalic.otf */; };
+		3B82C5E021AF4E1100EEB233 /* CircularStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B82C5D721AF4DC000EEB233 /* CircularStd-Book.otf */; };
+		3B82C5E121AF4E1400EEB233 /* CircularStd-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B82C5D821AF4DC000EEB233 /* CircularStd-BookItalic.otf */; };
+		3B82C5E221AF4E1600EEB233 /* CircularStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B82C5D921AF4DC000EEB233 /* CircularStd-Medium.otf */; };
+		3B82C5E321AF4E1800EEB233 /* CircularStd-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B82C5DA21AF4DC000EEB233 /* CircularStd-MediumItalic.otf */; };
 		3BBD2A32218AB1E70090368F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD2A31218AB1E70090368F /* SearchViewController.swift */; };
 		3BBD2A34218AB97F0090368F /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD2A33218AB97F0090368F /* BookDetailViewController.swift */; };
+		3BF56BDC21A49AEB004B95C3 /* BooksCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF56BDB21A49AEB004B95C3 /* BooksCollectionViewController.swift */; };
 		618FAC9D2187A9DC009E4197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618FAC9C2187A9DC009E4197 /* AppDelegate.swift */; };
 		618FAC9F2187A9DC009E4197 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618FAC9E2187A9DC009E4197 /* ARViewController.swift */; };
 		618FACA22187A9DC009E4197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618FACA02187A9DC009E4197 /* Main.storyboard */; };
@@ -44,8 +53,17 @@
 		3B61C6B42194FBC900A7089C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B61C6BF2195035300A7089C /* succulent.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = succulent.jpeg; sourceTree = "<group>"; };
 		3B61C6C02195035300A7089C /* dog.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpeg; sourceTree = "<group>"; };
+		3B82C5D321AF4DC000EEB233 /* CircularStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Black.otf"; sourceTree = "<group>"; };
+		3B82C5D421AF4DC000EEB233 /* CircularStd-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BlackItalic.otf"; sourceTree = "<group>"; };
+		3B82C5D521AF4DC000EEB233 /* CircularStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.otf"; sourceTree = "<group>"; };
+		3B82C5D621AF4DC000EEB233 /* CircularStd-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BoldItalic.otf"; sourceTree = "<group>"; };
+		3B82C5D721AF4DC000EEB233 /* CircularStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Book.otf"; sourceTree = "<group>"; };
+		3B82C5D821AF4DC000EEB233 /* CircularStd-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BookItalic.otf"; sourceTree = "<group>"; };
+		3B82C5D921AF4DC000EEB233 /* CircularStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.otf"; sourceTree = "<group>"; };
+		3B82C5DA21AF4DC000EEB233 /* CircularStd-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-MediumItalic.otf"; sourceTree = "<group>"; };
 		3BBD2A31218AB1E70090368F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = LifeLike/Controllers/SearchViewController.swift; sourceTree = SOURCE_ROOT; };
 		3BBD2A33218AB97F0090368F /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		3BF56BDB21A49AEB004B95C3 /* BooksCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCollectionViewController.swift; sourceTree = "<group>"; };
 		618FAC992187A9DC009E4197 /* LifeLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		618FAC9C2187A9DC009E4197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		618FAC9E2187A9DC009E4197 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +114,22 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		3B82C5DB21AF4DC000EEB233 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3B82C5D321AF4DC000EEB233 /* CircularStd-Black.otf */,
+				3B82C5D421AF4DC000EEB233 /* CircularStd-BlackItalic.otf */,
+				3B82C5D521AF4DC000EEB233 /* CircularStd-Bold.otf */,
+				3B82C5D621AF4DC000EEB233 /* CircularStd-BoldItalic.otf */,
+				3B82C5D721AF4DC000EEB233 /* CircularStd-Book.otf */,
+				3B82C5D821AF4DC000EEB233 /* CircularStd-BookItalic.otf */,
+				3B82C5D921AF4DC000EEB233 /* CircularStd-Medium.otf */,
+				3B82C5DA21AF4DC000EEB233 /* CircularStd-MediumItalic.otf */,
+			);
+			name = Fonts;
+			path = /Users/tiffanychen/Documents/dev/iOS/LifeLike/LifeLike.xcodeproj;
+			sourceTree = "<absolute>";
+		};
 		3BBD2A2B218A1E450090368F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +146,7 @@
 				61B6F2A72195EE2A005B726E /* ARModels */,
 				3B61C6C32195035700A7089C /* Images */,
 				618FAC9B2187A9DC009E4197 /* LifeLike */,
+				3B82C5DB21AF4DC000EEB233 /* Fonts */,
 				3B61C6B12194FBC900A7089C /* LifeLikeTests */,
 				618FAC9A2187A9DC009E4197 /* Products */,
 			);
@@ -154,6 +189,7 @@
 				3BBD2A31218AB1E70090368F /* SearchViewController.swift */,
 				618FAC9E2187A9DC009E4197 /* ARViewController.swift */,
 				3BBD2A33218AB97F0090368F /* BookDetailViewController.swift */,
+				3BF56BDB21A49AEB004B95C3 /* BooksCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -267,8 +303,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B82C5DC21AF4E0800EEB233 /* CircularStd-Black.otf in Resources */,
+				3B82C5DE21AF4E0D00EEB233 /* CircularStd-Bold.otf in Resources */,
+				3B82C5E021AF4E1100EEB233 /* CircularStd-Book.otf in Resources */,
+				3B82C5E321AF4E1800EEB233 /* CircularStd-MediumItalic.otf in Resources */,
 				618FACAA2187A9DD009E4197 /* LaunchScreen.storyboard in Resources */,
+				3B82C5DD21AF4E0B00EEB233 /* CircularStd-BlackItalic.otf in Resources */,
 				618FACA72187A9DD009E4197 /* Assets.xcassets in Resources */,
+				3B82C5E221AF4E1600EEB233 /* CircularStd-Medium.otf in Resources */,
+				3B82C5DF21AF4E0F00EEB233 /* CircularStd-BoldItalic.otf in Resources */,
+				3B82C5E121AF4E1400EEB233 /* CircularStd-BookItalic.otf in Resources */,
 				618FACA22187A9DC009E4197 /* Main.storyboard in Resources */,
 				61B6F2AB2195FBCE005B726E /* Manatee.usdz in Resources */,
 				61B6F2A92195F960005B726E /* Whale.usdz in Resources */,
@@ -291,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BF56BDC21A49AEB004B95C3 /* BooksCollectionViewController.swift in Sources */,
 				3B61C6A52194F28C00A7089C /* Image.swift in Sources */,
 				61A8A8F4219A342600677E7A /* DataManager.swift in Sources */,
 				3BBD2A32218AB1E70090368F /* SearchViewController.swift in Sources */,
@@ -491,7 +536,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DH9CSDXAJ;
+				DEVELOPMENT_TEAM = 2ZQBU8N8FB;
 				INFOPLIST_FILE = LifeLike/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -509,7 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DH9CSDXAJ;
+				DEVELOPMENT_TEAM = 2ZQBU8N8FB;
 				INFOPLIST_FILE = LifeLike/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
