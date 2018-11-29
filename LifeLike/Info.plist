@@ -2,8 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>CircularStd-Black.otf</string>
+		<string>CircularStd-BlackItalic.otf</string>
+		<string>CircularStd-Bold.otf</string>
+		<string>CircularStd-BoldItalic.otf</string>
+		<string>CircularStd-Book.otf</string>
+		<string>CircularStd-BookItalic.otf</string>
+		<string>CircularStd-Medium.otf</string>
+		<string>CircularStd-MediumItalic.otf</string>
+	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>Because I want to.</string>
+	<string>The application identifies models based on image recognition.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

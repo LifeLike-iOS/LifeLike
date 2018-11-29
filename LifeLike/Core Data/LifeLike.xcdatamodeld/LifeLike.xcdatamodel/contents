@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G2307" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C31g" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="SavedBook" representedClassName="SavedBook" syncable="YES" codeGenerationType="class">
         <attribute name="authors" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isbn" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="publication_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="publisher" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="savedImages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SavedImage" inverseName="savedBook" inverseEntity="SavedImage" syncable="YES"/>
+        <relationship name="savedImages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SavedImage" syncable="YES"/>
     </entity>
     <entity name="SavedImage" representedClassName="SavedImage" syncable="YES" codeGenerationType="class">
         <attribute name="imageFile" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="modelFile" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="page_number" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="savedBook" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SavedBook" inverseName="savedImages" inverseEntity="SavedBook" syncable="YES"/>
+        <relationship name="savedBook" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SavedBook" syncable="YES"/>
     </entity>
     <elements>
         <element name="SavedBook" positionX="-292.2734375" positionY="-80.6953125" width="128" height="135"/>
