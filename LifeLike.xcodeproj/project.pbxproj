@@ -30,9 +30,6 @@
 		618FACA72187A9DD009E4197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618FACA62187A9DD009E4197 /* Assets.xcassets */; };
 		618FACAA2187A9DD009E4197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618FACA82187A9DD009E4197 /* LaunchScreen.storyboard */; };
 		61A8A8F4219A342600677E7A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A8A8F3219A342600677E7A /* DataManager.swift */; };
-		61B6F2A62195054E005B726E /* Dolphin.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 61B6F2A52195054E005B726E /* Dolphin.usdz */; };
-		61B6F2A92195F960005B726E /* Whale.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 61B6F2A82195F960005B726E /* Whale.usdz */; };
-		61B6F2AB2195FBCE005B726E /* Manatee.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 61B6F2AA2195FBCE005B726E /* Manatee.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,9 +70,6 @@
 		618FACA92187A9DD009E4197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		618FACAB2187A9DD009E4197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61A8A8F3219A342600677E7A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		61B6F2A52195054E005B726E /* Dolphin.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dolphin.usdz; sourceTree = "<group>"; };
-		61B6F2A82195F960005B726E /* Whale.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Whale.usdz; sourceTree = "<group>"; };
-		61B6F2AA2195FBCE005B726E /* Manatee.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Manatee.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				61A8A8F3219A342600677E7A /* DataManager.swift */,
-				61B6F2A72195EE2A005B726E /* ARModels */,
 				3B61C6C32195035700A7089C /* Images */,
 				618FAC9B2187A9DC009E4197 /* LifeLike */,
 				3B82C5DB21AF4DC000EEB233 /* Fonts */,
@@ -201,16 +194,6 @@
 				618FACA82187A9DD009E4197 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		61B6F2A72195EE2A005B726E /* ARModels */ = {
-			isa = PBXGroup;
-			children = (
-				61B6F2A82195F960005B726E /* Whale.usdz */,
-				61B6F2AA2195FBCE005B726E /* Manatee.usdz */,
-				61B6F2A52195054E005B726E /* Dolphin.usdz */,
-			);
-			path = ARModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,9 +297,6 @@
 				3B82C5DF21AF4E0F00EEB233 /* CircularStd-BoldItalic.otf in Resources */,
 				3B82C5E121AF4E1400EEB233 /* CircularStd-BookItalic.otf in Resources */,
 				618FACA22187A9DC009E4197 /* Main.storyboard in Resources */,
-				61B6F2AB2195FBCE005B726E /* Manatee.usdz in Resources */,
-				61B6F2A92195F960005B726E /* Whale.usdz in Resources */,
-				61B6F2A62195054E005B726E /* Dolphin.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
