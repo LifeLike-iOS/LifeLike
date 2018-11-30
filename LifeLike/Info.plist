@@ -21,9 +21,6 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-<<<<<<< HEAD
-	<string>Because I want to.</string>
-=======
 	<string>The application identifies models based on image recognition.</string>
 	<key>UIAppFonts</key>
 	<array>
@@ -36,7 +33,6 @@
 		<string>CircularStd-Medium.otf</string>
 		<string>CircularStd-MediumItalic.otf</string>
 	</array>
->>>>>>> 3c7665d08ff74cdd9ada19cab205c6e4e189db61
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

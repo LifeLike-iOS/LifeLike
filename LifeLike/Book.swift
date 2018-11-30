@@ -9,10 +9,11 @@
 import Foundation
 
 public struct Book {
-  var title: String
-  var authors: String
-  var ISBN: String
-  var publisher: String
-  var pageCount: Int
-  var images: [Image]
+    var id: String
+    var title: String
+    var authors: String
+    var ISBN: String
+    var publisher: String
+    var pageCount: Int
+    var images: [Image]
 }

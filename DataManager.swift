@@ -14,14 +14,39 @@ fileprivate typealias JSONDictionary = [String: Any]
 
 class DataManager {
    
-    let defaultSession = URLSession(configuration: .default)
-    weak var appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+    static let shared = DataManager()
     
+    let defaultSession = URLSession(configuration: .default)
     
     init() {
     }
     
-    func downloadBook(id: String, _ completion: @escaping () -> ()) {
+    func searchForBooks(_ text: String, completion: @escaping (([Book]) -> ())) {
+        if let url = URL(string: "https://lifelike-api.herokuapp.com/books/search/\(text)") {
+            let dataTask = defaultSession.dataTask(with: url) { (data, response, error) in
+                if let error = error {
+                    print(error)
+                }
+                else if let data = data,
+                    let response = response as? HTTPURLResponse,
+                    response.statusCode == 200 {
+                    do {
+                        if let dict = try JSONSerialization.jsonObject(with: data, options: []) as? [JSONDictionary] {
+                            completion(dict.map({ (bookInfo) -> Book in
+                                return self.loadBookInfo(dict: bookInfo)
+                            }))
+                        }
+                    } catch {
+                        print(error)
+                    }
+                    
+                }
+            }
+            dataTask.resume()
+        }
+    }
+    
+    func downloadBook(id: String) {
         // Gets one book with endpoint /books/[:id]
         
         if let url = URL(string: "https://lifelike-api.herokuapp.com/books/\(id)") {
@@ -34,7 +59,7 @@ class DataManager {
                     response.statusCode == 200 {
                     do {
                         if let dict = try JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary {
-                            self.saveBook(dict, completion)
+                            self.saveBook(dict)
                         }
                     } catch {
                         print(error)
@@ -46,10 +71,11 @@ class DataManager {
         }
     }
     
-    func getBook(title: String) -> Book? {
+    func getBook(id: String) -> Book? {
+        weak var appDelegate = (UIApplication.shared.delegate as! AppDelegate)
         guard let context = appDelegate?.persistentContainer.viewContext else { return nil }
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedBook")
-        request.predicate = NSPredicate(format: "%K == %@", "title", title)
+        request.predicate = NSPredicate(format: "%K == %@", "oid", id)
         do {
             let result = try context.fetch(request) as! [NSManagedObject]
             if result.count > 0 {
@@ -60,27 +86,15 @@ class DataManager {
         }
         return nil
     }
-    
-    func getBooks() -> [Book] {
-        guard let context = appDelegate?.persistentContainer.viewContext else { return [] }
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedBook")
-        do {
-            let result = try context.fetch(request) as! [NSManagedObject]
-            return result.map({ (bookObject) -> Book in
-                return loadBook(data: bookObject)
-            })
-        } catch {
-            print(error)
-            return []
-        }
-    }
 }
 
 private extension DataManager {
-    func saveBook(_ bookInfo: JSONDictionary, _ completion: () -> ()) {
+    func saveBook(_ bookInfo: JSONDictionary) {
+        weak var appDelegate = (UIApplication.shared.delegate as! AppDelegate)
         guard let context = appDelegate?.persistentContainer.viewContext else { return }
         let fileManager = FileManager.default
         let book = SavedBook(context: context)
+        book.oid = (bookInfo["_id"] as! [String : String])["$oid"]
         book.authors = bookInfo["authors"] as? String
         book.isbn = bookInfo["ISBN_13"] as? String
         book.title = bookInfo["title"] as? String
@@ -104,25 +118,30 @@ private extension DataManager {
                 book.addToSavedImages(image)
             }
         }
-        saveContext(context, completion)
+        saveContext(context)
     }
     
-    func loadBookInfo(data: NSManagedObject) -> Book {
-        let title = data.value(forKey: "title") as! String
-        let authors = (data.value(forKey: "authors") as? String) ?? ""
-        let isbn = data.value(forKey: "isbn") as! String
-        let publisher = data.value(forKey: "publisher") as! String
-        let pageCount = data.value(forKey: "pageCount") as! Int
-        return Book(title: title, authors: authors, ISBN: isbn, publisher: publisher, pageCount: pageCount, images: [])
+    func loadBookInfo(dict: JSONDictionary) -> Book {
+        let id = (dict["_id"] as! JSONDictionary)["$oid"] as! String
+        let title = dict["title"] as! String
+        let authors = dict["authors"] as! String
+        let isbn = dict["ISBN_13"] as! String
+        let publisher = dict["publisher"] as! String
+        let pageCount = dict["page_count"] as! Int
+        return Book(id: id, title: title, authors: authors, ISBN: isbn, publisher: publisher, pageCount: pageCount, images: [])
     }
     
     func loadBook(data: NSManagedObject) -> Book {
-        var book = loadBookInfo(data: data)
+        let id = data.value(forKey: "oid") as! String
+        let title = data.value(forKey: "title") as! String
+        let authors = (data.value(forKey: "authors") as! String)
+        let isbn = data.value(forKey: "isbn") as! String
+        let publisher = data.value(forKey: "publisher") as! String
+        let pageCount = data.value(forKey: "pageCount") as! Int
         let images = (data.value(forKey: "savedImages") as! Set).map { (savedImage) -> Image in
             loadImage(data: savedImage)
         }
-        book.images = images
-        return book
+        return Book(id: id, title: title, authors: authors, ISBN: isbn, publisher: publisher, pageCount: pageCount, images: images)
     }
     
     func loadImage(data: NSManagedObject) -> Image {
@@ -133,10 +152,9 @@ private extension DataManager {
         return Image(title: title, imageFile: imageFile!, modelFile: modelFile, pageNumber: pageNumber)
     }
     
-    func saveContext(_ context: NSManagedObjectContext, _ completion: () -> ()) {
+    func saveContext(_ context: NSManagedObjectContext) {
         do {
             try context.save()
-            completion()
         } catch {
             print(error)
         }

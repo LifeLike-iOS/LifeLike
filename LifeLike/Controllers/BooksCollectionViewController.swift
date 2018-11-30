@@ -7,53 +7,65 @@
 //
 
 import UIKit
+import Foundation
+import CoreData
 
 class BooksCollectionViewController: UIViewController {
   
     @IBOutlet weak var collectionView: UICollectionView!
+    var dataManager = DataManager.shared
+    var fetchResultsController: NSFetchedResultsController<SavedBook>?
     
     override func viewDidLoad() {
-//        let layout = UICollectionViewFlowLayout()
-//        layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
-//        collectionView.delegate = self as? UICollectionViewDelegate
-//        collectionView.dataSource = self as? UICollectionViewDataSource
-//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
-//        collectionView.backgroundColor = UIColor.clear
-//        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
+        collectionView.delegate = self as UICollectionViewDelegate
+        collectionView.dataSource = self as UICollectionViewDataSource
+        collectionView.register(UINib(nibName: "BookViewCell", bundle: .main), forCellWithReuseIdentifier: "bookViewCell")
+        collectionView.backgroundColor = UIColor.clear
         
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext 
+        let fetchRequest = NSFetchRequest<SavedBook>(entityName: "SavedBook")
+        // Configure the request's entity, and optionally its predicate
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchResultsController?.delegate = self
+        do {
+            try fetchResultsController?.performFetch()
+        } catch {
+            print(error)
+        }
     }
-    //  super.viewWillAppear(true)
-//    // Show the Navigation Bar
-//    self.navigationController?.setNavigationBarHidden(true, animated: true)
-//  }
-//
-//  override func viewWillDisappear(_ animated: Bool) {
-//    super.viewWillDisappear(true)
-//    // Hide the Navigation Bar
-//    self.navigationController?.setNavigationBarHidden(false, animated: false)
-//  }
-//    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showARView" {
+            guard let indexPath = sender as? IndexPath else { return }
+            guard let arViewController = segue.destination as? ARViewController else { return }
+            arViewController.book = dataManager.getBook(id: (fetchResultsController?.object(at: indexPath).oid)!)
+        }
     }
-    */
 
 }
 
-//extension BookDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 1
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//
-//    }
-//
-//
-//}
+extension BooksCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return fetchResultsController?.fetchedObjects?.count ?? 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bookViewCell", for: indexPath) as! BookViewCell
+        let book = fetchResultsController?.object(at: indexPath)
+        cell.titleLabel.text = book?.title
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showARView", sender: indexPath)
+    }
+}
+
+extension BooksCollectionViewController: NSFetchedResultsControllerDelegate {
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        collectionView.reloadData()
+    }
+}
