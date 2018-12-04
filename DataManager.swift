@@ -86,6 +86,45 @@ class DataManager {
         }
         return nil
     }
+    
+    func getBooks(ids: [String]) -> [Book] {
+        weak var appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+        guard let context = appDelegate?.persistentContainer.viewContext else { return [] }
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedBook")
+        request.predicate = NSPredicate(format: "%K in %@", "oid", ids)
+        do {
+            let result = try context.fetch(request) as! [NSManagedObject]
+            return result.map({ (savedBook) -> Book in
+                loadBook(data: savedBook)
+            })
+        } catch {
+            print(error)
+        }
+        return []
+    }
+    
+    func deleteBook(id: String) {
+        weak var appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+        guard let context = appDelegate?.persistentContainer.viewContext else { return }
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedBook")
+        request.predicate = NSPredicate(format: "%K == %@", "oid", id)
+        do {
+            let result = try context.fetch(request) as! [NSManagedObject]
+            if result.count > 0 {
+                let book = result[0] as! SavedBook
+                let fileManager = FileManager.default
+                for image in (book.savedImages as! Set<SavedImage>) {
+                    if fileManager.fileExists(atPath: image.modelFile!) {
+                        try fileManager.removeItem(atPath: image.modelFile!)
+                    }
+                }
+                context.delete(result[0])
+            }
+        } catch {
+            print(error)
+        }
+        saveContext(context)
+    }
 }
 
 private extension DataManager {
@@ -128,6 +167,16 @@ private extension DataManager {
         let isbn = dict["ISBN_13"] as! String
         let publisher = dict["publisher"] as! String
         let pageCount = dict["page_count"] as! Int
+        return Book(id: id, title: title, authors: authors, ISBN: isbn, publisher: publisher, pageCount: pageCount, images: [])
+    }
+    
+    func loadBookInfo(data: NSManagedObject) -> Book {
+        let id = data.value(forKey: "oid") as! String
+        let title = data.value(forKey: "title") as! String
+        let authors = (data.value(forKey: "authors") as! String)
+        let isbn = data.value(forKey: "isbn") as! String
+        let publisher = data.value(forKey: "publisher") as! String
+        let pageCount = data.value(forKey: "pageCount") as! Int
         return Book(id: id, title: title, authors: authors, ISBN: isbn, publisher: publisher, pageCount: pageCount, images: [])
     }
     

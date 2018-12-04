@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C38b" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C52a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="SavedBook" representedClassName="SavedBook" syncable="YES" codeGenerationType="class">
         <attribute name="authors" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isbn" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,7 +8,7 @@
         <attribute name="publicationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="publisher" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="savedImages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SavedImage" inverseName="savedBook" inverseEntity="SavedImage" syncable="YES"/>
+        <relationship name="savedImages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SavedImage" inverseName="savedBook" inverseEntity="SavedImage" syncable="YES"/>
     </entity>
     <entity name="SavedImage" representedClassName="SavedImage" syncable="YES" codeGenerationType="class">
         <attribute name="imageFile" optional="YES" attributeType="Binary" syncable="YES"/>

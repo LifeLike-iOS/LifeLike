@@ -46,10 +46,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsE-6W-2iy">
                                 <rect key="frame" x="0.0" y="0.0" width="834" height="88"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCP-26-pHG">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCP-26-pHG">
                                         <rect key="frame" x="75" y="47" width="33" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="33" id="w2j-Ge-QSV"/>
+                                            <constraint firstAttribute="width" constant="33" id="8T5-aS-D1D"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="28"/>
                                         <state key="normal" backgroundImage="Minimize">
@@ -59,7 +59,7 @@
                                             <action selector="pressedMinimize:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tzr-9P-JIl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jue-wE-aHO">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jue-wE-aHO">
                                         <rect key="frame" x="708" y="25" width="49" height="65"/>
                                         <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="28"/>
                                         <state key="normal" title="Exit">
@@ -72,7 +72,12 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.5107765793800354" green="0.75541269779205322" blue="0.61567008495330811" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="LCP-26-pHG" firstAttribute="centerY" secondItem="jue-wE-aHO" secondAttribute="centerY" id="PDX-eB-Vvt"/>
+                                    <constraint firstItem="LCP-26-pHG" firstAttribute="centerY" secondItem="jue-wE-aHO" secondAttribute="centerY" id="8yi-Tl-TwF"/>
+                                    <constraint firstItem="LCP-26-pHG" firstAttribute="leading" secondItem="KsE-6W-2iy" secondAttribute="leading" constant="75" id="9rp-0L-ggD"/>
+                                    <constraint firstAttribute="bottom" secondItem="jue-wE-aHO" secondAttribute="bottom" constant="-2" id="D5V-07-Q8x"/>
+                                    <constraint firstItem="LCP-26-pHG" firstAttribute="top" secondItem="KsE-6W-2iy" secondAttribute="top" constant="47" id="OzX-7k-Hyk"/>
+                                    <constraint firstAttribute="trailing" secondItem="jue-wE-aHO" secondAttribute="trailing" constant="77" id="dSs-n9-nRq"/>
+                                    <constraint firstItem="jue-wE-aHO" firstAttribute="top" secondItem="KsE-6W-2iy" secondAttribute="top" constant="25" id="zGk-MK-375"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d62-Jh-o4J">
@@ -266,7 +271,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="pressedAddToCollection:" destination="RX6-Xi-DlH" eventType="touchUpInside" id="MeD-br-byp"/>
+                                    <action selector="pressedActionButton:" destination="RX6-Xi-DlH" eventType="touchUpInside" id="q28-hM-deg"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m3F-4g-POD">
@@ -307,6 +312,7 @@
                     </view>
                     <connections>
                         <outlet property="ISBNLabel" destination="28f-Yl-Wj5" id="yin-iK-086"/>
+                        <outlet property="actionButton" destination="B54-mj-OId" id="bv0-ta-hFW"/>
                         <outlet property="authorsLabel" destination="x5V-bD-CH0" id="Xqi-Ly-OgI"/>
                         <outlet property="numPagesLabel" destination="zDs-w9-R2z" id="NtN-tk-3bz"/>
                         <outlet property="publisherLabel" destination="8Yn-QK-rUv" id="L5d-EM-YL6"/>

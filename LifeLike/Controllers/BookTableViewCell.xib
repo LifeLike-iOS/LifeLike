@@ -30,14 +30,6 @@
                         <color key="textColor" red="0.51077657939999999" green="0.75541269779999998" blue="0.61567008499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pii-BR-Gah">
-                        <rect key="frame" x="722" y="26" width="60" height="60"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button" image="Add-Button"/>
-                        <connections>
-                            <action selector="pressedAddButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mPM-2f-GWV"/>
-                        </connections>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezp-Pu-vtG">
                         <rect key="frame" x="587" y="32" width="99" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -59,11 +51,16 @@
                         <color key="textColor" red="0.40000575779999997" green="0.39998957509999999" blue="0.40000051260000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="hLX-Ss-xOa">
+                        <rect key="frame" x="749" y="36" width="41" height="41"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="authorLabel" destination="1ZF-ZN-49S" id="gIK-Jk-Jyr"/>
+                <outlet property="checkmarkImage" destination="hLX-Ss-xOa" id="0M7-4n-edW"/>
                 <outlet property="publisherLabel" destination="d2B-md-IPN" id="ymP-ai-cXB"/>
                 <outlet property="titleLabel" destination="ycd-HI-9eJ" id="a3L-8j-exs"/>
                 <outlet property="yearLabel" destination="ezp-Pu-vtG" id="9ef-ZK-ypY"/>
@@ -72,6 +69,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Add-Button" width="120" height="120"/>
+        <image name="checkmark" width="81" height="63"/>
     </resources>
 </document>
