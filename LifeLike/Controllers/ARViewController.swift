@@ -107,7 +107,7 @@ extension ARViewController: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         let node = SCNNode()
         guard let book = self.book else { return node }
-        if let imageAnchor = anchor as? ARImageAnchor, let imageName = imageAnchor.name {
+        if currentNode == nil, let imageAnchor = anchor as? ARImageAnchor, let imageName = imageAnchor.name {
             let image = book.images.first { im -> Bool in
                 return im.title == imageName
             }
