@@ -37,11 +37,13 @@ class ARViewController: UIViewController {
         resetTrackingConfiguration()
         
         let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGesture(sender:)))
+        let pinchRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(scaleObject(gesture:)))
         sceneView.addGestureRecognizer(panRecognizer)
+        sceneView.addGestureRecognizer(pinchRecognizer)
         view.addSubview(sceneView!)
         titleLabel.text = book?.title
         infoView.layer.zPosition = 10000.0
-        toolBarView.layer.zPosition = .greatestFiniteMagnitude
+        toolBarView.layer.zPosition = 20000.0
     }
     
     @objc func panGesture(sender: UIPanGestureRecognizer) {
@@ -49,12 +51,24 @@ class ARViewController: UIViewController {
         let translation = sender.translation(in: sender.view!)
         var newAngle = (Float)(translation.x)*(Float.pi)/180.0
         newAngle += currentAngle
-
+        let scale = node.scale
         node.transform = SCNMatrix4MakeRotation(newAngle, 0, 1, 0)
-
+        node.scale = scale
         if(sender.state == UIGestureRecognizer.State.ended) {
             currentAngle = newAngle
         }
+    }
+    
+    @objc func scaleObject(gesture: UIPinchGestureRecognizer) {
+        guard let nodeToScale = currentNode else { return }
+        if gesture.state == .changed {
+            let pinchScaleX: CGFloat = gesture.scale * CGFloat((nodeToScale.scale.x))
+            let pinchScaleY: CGFloat = gesture.scale * CGFloat((nodeToScale.scale.y))
+            let pinchScaleZ: CGFloat = gesture.scale * CGFloat((nodeToScale.scale.z))
+            nodeToScale.scale = SCNVector3Make(Float(pinchScaleX), Float(pinchScaleY), Float(pinchScaleZ))
+            gesture.scale = 1
+        }
+        if gesture.state == .ended { }
     }
     
     @IBAction func pressedMinimize(_ sender: Any) {
