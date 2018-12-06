@@ -150,7 +150,7 @@ private extension DataManager {
                 }
                 if let modelFileString = (imageInfo["model_file"] as? String) {
                     let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("\(image.title!).usdz")
-                    image.modelFile = paths
+                    image.modelFile = "\(image.title!).usdz"
                     let modelData = Data.init(base64Encoded: modelFileString)!
                     fileManager.createFile(atPath: paths, contents: modelData, attributes: nil)
                 }

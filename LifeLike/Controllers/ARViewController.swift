@@ -111,7 +111,7 @@ extension ARViewController: ARSCNViewDelegate {
             let image = book.images.first { im -> Bool in
                 return im.title == imageName
             }
-            let modelURL = URL(string: image!.modelFile)!
+            let modelURL = fileInDocumentsDirectory(filename: image!.modelFile)
             if let modelNode = SCNReferenceNode(url: modelURL) {
                 modelNode.load()
                 node.addChildNode(modelNode)
@@ -146,5 +146,11 @@ private extension ARViewController {
         sceneView.session.run(configuration, options: options)
         imageNameLabel.text = ""
         pageLabel.text = ""
+    }
+    
+    func fileInDocumentsDirectory(filename: String) -> URL {
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let fileURL = documentsURL.appendingPathComponent(filename)
+        return fileURL
     }
 }
