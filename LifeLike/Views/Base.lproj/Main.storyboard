@@ -33,7 +33,7 @@
                                 <color key="backgroundColor" red="0.51077657939999999" green="0.75541269779999998" blue="0.61567008499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="nJ0-Tn-8S4"/>
-                                    <barButtonItem systemItem="refresh" id="YgE-rw-lAh">
+                                    <barButtonItem title="Item" image="refresh" id="YgE-rw-lAh">
                                         <color key="tintColor" red="0.9764837623" green="0.97644716499999995" blue="0.97647196049999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <action selector="refreshButtonPressed:" destination="BYZ-38-t0r" id="AZt-4S-K1y"/>
@@ -630,5 +630,6 @@
         <image name="Onboarding 2" width="3072" height="4098"/>
         <image name="Onboarding 3" width="3072" height="4098"/>
         <image name="Search-Bar" width="826" height="52"/>
+        <image name="refresh" width="25" height="30"/>
     </resources>
 </document>
